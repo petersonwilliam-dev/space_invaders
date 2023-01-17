@@ -132,6 +132,22 @@ body{
 
 }
 
+.copy{
+    position: absolute;
+    top: 75vh;
+    left: 42%;
+    padding: 2em;
+    color: #fff;
+}
+
+.copy p{
+    font-size: 20px;
+}
+
+.copy span{
+    font-weight: bold;
+}
+
 /* SELECT SCREEN */
 
 .select-screen{
