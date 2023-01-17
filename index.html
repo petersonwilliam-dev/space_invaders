@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <link rel="shortcut icon" href="img/favicon.png" type="image/x-icon">
+    <title>Space Invaders</title>
+</head>
+<body>
+    <div class="container-game" id="container-game">
+
+        <div class="initial-screen" id="initial-screen">
+            <div class="title">
+                <h1>Space Invaders</h1>
+                <p>Defenda a terra de alienígenas que estão querendo invadir nosso planeta</p>
+            </div><!--title-->
+            <div>
+                <button onclick="iniciaJogo()" class="play_game">Play <ion-icon name="play-outline"></ion-icon></button>
+            </div><!--button-->
+            <div class="options">
+                <ul>
+                    <li onclick="moveScreenDown()"><ion-icon name="rocket-outline"></ion-icon></li>
+                </ul>
+            </div><!--Options-->
+
+            <div class="container-instruction">
+                <div class="instructions">
+                    <h4>Instructions</h4>
+                    <ul>
+                        <li><ion-icon name="caret-up-circle-outline"></ion-icon> Up</li>
+                        <li><ion-icon name="caret-down-circle-outline"></ion-icon> Down</li>
+                        <li><ion-icon name="caret-forward-circle-outline"></ion-icon> Right</li>
+                        <li><ion-icon name="caret-back-circle-outline"></ion-icon> Left</li>
+                        <li><ion-icon name="remove-outline"></ion-icon> Shoot</li>
+                    </ul>
+                </div><!--Instructions-->
+            </div><!--container instructdiion-->
+
+        </div><!--initial screen-->
+
+        <div class="select-screen" id="select-screen">
+            <div class="btn-back">
+                <button onclick="moveScreenUp()" class="back">
+                    <ion-icon name="arrow-back-outline"></ion-icon>
+                </button>
+            </div>
+            <h2>Select Your Ship</h2>
+            <div class="container-select">
+                <div class="current-ship">
+                    <img src="" id="img-current-ship" alt="">
+                </div><!--current ship-->
+                <div class="select-ship">
+                    <div onclick="SelectShip(0)" class="ship"><img class="img-ship" src="img/ship1.png" alt="Nave 1"></div>
+                    <div onclick="SelectShip(1)" class="ship"><img class="img-ship" src="img/ship2.png" alt="Nave 2"></div>
+                    <div onclick="SelectShip(2)" class="ship"><img class="img-ship" src="img/ship3.png" alt="Nave 3"></div>
+                    <div onclick="SelectShip(3)" class="ship"><img class="img-ship" src="img/ship4.png" alt="Nave 4"></div>
+                    <div onclick="SelectShip(4)" class="ship"><img class="img-ship" src="img/ship5.png" alt="Nave 5"></div>
+                    <div onclick="SelectShip(5)" class="ship"><img class="img-ship" src="img/ship6.png" alt="Nave 6"></div>
+                    <div onclick="SelectShip(6)" class="ship"><img class="img-ship" src="img/ship7.png" alt="Nave 7"></div>
+                </div><!--select ship-->
+            </div>
+        </div><!--Select ship-->
+
+    </div><!--contaienr game-->
+
+    <div class="game-screen" id="game-screen">
+        <img id="player-ship" src="" alt="Nave Jogador">
+
+        <div class="container-life">
+            <p>Life</p>
+            <div class="life-bar">
+                <div class="life" id="life-player"></div>
+            </div>
+        </div>
+
+    </div><!-- Game Screen -->
+
+    <div class="result-screen" id="result-screen">
+        <h1 id="result"></h1>
+        <p id="message"></p>
+        <button class="play_game" onclick="restartGame()">Jogar Novamente</button>
+    </div><!--result screen-->
+
+    <!--Ion icons-->
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+    <!--Javascript-->
+    <script src="index.js"></script>
+</body>
+</html>

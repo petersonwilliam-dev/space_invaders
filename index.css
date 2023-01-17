@@ -1,0 +1,326 @@
+@import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;500;600;700&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background: url('img/background.jpg');
+    background-size: cover;
+    font-family: 'Rajdhani', sans-serif;
+    overflow: hidden;
+}
+
+.container-game{
+    transform: translateY(0);
+    transition: 1s;
+}
+
+/* INITIAL SCREEN */
+
+.initial-screen{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.title{
+    text-align: center;
+}
+
+.title h1{
+    color: #fff;
+    font-size: 45px;
+}
+
+.title p{
+    color: #fff;
+    font-size: 20px;
+}
+
+.play_game {
+    padding: 1em 2em;
+    border: 1px solid #fff;
+    border-radius: 5px;
+    color: #fff;
+    margin: 2em 0;
+    background: none;
+    font-family: 'Rajdhani', sans-serif;
+    font-size: 15pt;
+    cursor: pointer;
+    transition: .5s;
+    display: flex;
+    align-items: center;
+}
+
+.play_game:hover{
+    background: #fff;
+    box-shadow: 1px 1px 10px #fff;
+    color: #000;
+}
+
+.options{
+    margin: 1em 0;
+    width: 100%;
+}
+
+.options ul{
+    list-style: none;
+    display: flex;
+    justify-content: center;
+}
+
+.options li{
+    color: #fff;
+    width: 50px;
+    height: 50px;
+    margin: 0 10px;
+    border-radius: 50%;
+    border: 1px solid #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: .5s;
+}
+
+.options li:hover{
+    background: #fff;
+    box-shadow: 1px 1px 10px #fff;
+    color: #000;
+}
+
+.options li ion-icon{
+    font-size: 20px;
+}
+
+.container-instruction{
+    width: 100%;
+    display: flex;
+    justify-content: end;
+    margin-top: -100px;
+}
+
+.instructions{
+    color: #fff;
+    margin-right: 3em;
+    padding: 1em 2em;
+    border-radius: 10px;
+    border: 1px solid #fff;
+}
+
+.instructions h4{
+    margin-bottom: 1em;
+}
+
+.instructions ul{
+    list-style: none;
+}
+
+.instructions li{
+    display: flex;
+    align-items: center;
+}
+
+.instructions ion-icon{
+    margin-right: 10px;
+
+}
+
+/* SELECT SCREEN */
+
+.select-screen{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.select-screen h2{
+    color: #fff;
+    font-size: 30pt;
+    margin-bottom: 1.5em;
+}
+
+.container-select{
+    width: 90%;
+    height: 70%;
+    display: grid; 
+    grid-template-rows: 1;
+    grid-template-columns: 1fr 2fr;
+}
+
+.current-ship,
+.select-ship{
+    border: 1px solid #fff;
+    padding: 2em;
+    border-radius: 25px;
+    margin: 0 20px;
+}
+
+.current-ship{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#img-current-ship{
+    width: 300px;
+}
+
+.select-ship{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.ship{
+    padding: 1em;
+    margin: 1em;
+    border: 1px solid #fff;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.ship:hover{
+    border-color: rgba(43, 157, 238, 0.933);
+    box-shadow: 1px 1px 10px rgba(43, 157, 238, 0.933);
+}
+
+.selected {
+    border-color: rgba(43, 157, 238, 0.933);
+    box-shadow: 1px 1px 10px rgba(43, 157, 238, 0.933);
+}
+
+.ship img{
+    width: 100px;
+}
+
+.btn-back{
+    width: 100%;
+    padding: 0 2em;
+}
+
+.back{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 1px solid #fff;
+    background: none;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    transition: .5s;
+    cursor: pointer;
+}
+
+.back:hover{
+    background: #fff;
+    color: #000;
+}
+
+/* GAME SCREEN */
+
+#game-screen{
+    display: none;
+}
+
+#player-ship{
+    width: 55px;
+    position: absolute;
+    left: 48%;
+    top: 500px;
+}
+
+.container-alien{
+    position: absolute;
+}
+.alien{
+    width: 50px;
+}
+
+.shot{
+    position: absolute;
+}
+
+.shot img{
+    width: 20px;
+}
+
+.shot-alien{
+    position: absolute;
+}
+
+.shot-alien img{
+    width: 20px;
+}
+
+.container-life{
+    position: absolute;
+    top: 90%;
+    left: 30px;
+}
+
+.container-life p {
+    color: #fff;
+    font-size: 20px;
+}
+
+.life-bar{
+    width: 300px;
+    height: 30px;
+    border: 2px solid #fff;
+}
+
+.life{
+    width: 100%;
+    height: 100%;
+    background: rgb(44, 215, 44);
+}
+
+.explosion{
+    position: absolute;
+    width: 70px;
+}
+.explosion img{
+    width: 70px;
+}
+
+.explosionBoss{
+    position: absolute;
+}
+
+.explosionBoss img{
+    width: 300px;
+}
+
+.boss{
+    position: absolute;
+    top: -500px;
+    transition: 2s;
+}
+
+.visible{
+    top: -100px;
+}
+
+#result-screen{
+    display: none;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: white;
+}
