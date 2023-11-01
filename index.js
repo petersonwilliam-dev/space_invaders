@@ -1,3 +1,5 @@
+// VARS
+
 var PlayerShip
 var PositionPlayerX, PositionPlayerY, DirectionPlayerX, DirectionPlayerY
 var ShotSpeed
@@ -479,6 +481,7 @@ function manageGame() {
                     document.getElementById("result").innerHTML = "Você Perdeu!"
                     document.getElementById("message").innerHTML = "Você Infelizmente não conseguiu, jogue novamente para impedir dessa vez!"
             }, 3000)
+
         } else if (aliensAtPlay.length <= 0 && AliensQuantity <= 0) {
             clearInterval(timerAlien)
             createBoss()
@@ -553,17 +556,16 @@ function restartGame() {
 
     // REMOVE ELEMENTS
 
-        let shotAliens = document.getElementsByClassName('shot-alien')
-        let shotPlayer = document.getElementsByClassName('shot')
-    
-        for (let i = 0; i < shotAliens.length; i++) {
-            shotAliens[i].remove()
-        }
-    
-        for (let i = 0; i < shotPlayer.length; i++) {
-            shotPlayer[i].remove()
+    let aliens = document.querySelectorAll(".container-alien")
+    let AlienShots = document.querySelectorAll(".shot-alien")
+
+    for (let i = 0; i < aliens.length; i++) {
+        aliens[i].remove()
     }
-    
+
+    for (let i = 0; i < AlienShots.length; i++) {
+        AlienShots[i].remove()
+    }
 
     Life.style.width = LifePlayer+"px";
 
